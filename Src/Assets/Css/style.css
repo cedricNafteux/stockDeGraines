@@ -1,0 +1,9 @@
+header{
+    height: 200px;
+    background-color: blue;
+}
+
+.corps{
+    background-color: blueviolet;
+    height: 400px;
+}
