@@ -1,9 +1,21 @@
 header{
-    height: 200px;
-    background-color: blue;
+    height: 100px;
+    background-color: rgb(2, 2, 83);
+    color: aliceblue;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
-.corps{
-    background-color: blueviolet;
-    height: 400px;
+nav{
+    height: 50px;
+    background-color: rgb(37, 37, 189);
+    color: aliceblue;
+}
+table{
+    border-collapse: collapse;
+}
+
+td, th{
+    border: 1px solid black;
 }

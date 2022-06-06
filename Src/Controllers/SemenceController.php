@@ -13,7 +13,7 @@ class SemenceController extends Controller {
         $this->render('Semence/ListSemence', $param);
 
     }
-    // public function list() {
+    // public function ajout() {
     //     $model = new PhotoModel();
     //     $photos = $model->listPhoto();
     //     $param = ['photos' => $photos];
