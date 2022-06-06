@@ -25,5 +25,20 @@ class Dao
         return $semences;
     }
 
+    public function insertSemence($semence)
+    {
+        $sql = 'INSERT INTO semences VALUES (null, :nom)' ;
+        $semenceStat = $this->dbConnect->prepare($sql);
+        $param = [
+            ':nom' => $semence->getNomSemence(),
+        ];
+        $semenceStat->execute($param);
+    }
 
+    public function deleteSemence($id)
+    {
+        $sql = 'DELETE FROM semences WHERE id_semence = '.$id ;
+        $semenceStat = $this->dbConnect->prepare($sql);
+        $semenceStat->execute();
+    }
 }

@@ -12,7 +12,8 @@
         <h1>Mon stock de graines</h1>
     </header>
     <nav>
-    <a href="index.php?entity=semence&action=ajout">ajoutez une semence</a>
+    <a href="index.php?entity=semence&action=list">Accueil</a>
+    <a href="index.php?entity=semence&action=ajout">Ajoutez une semence</a>
     </nav>
     <main class="container">
             <?php
