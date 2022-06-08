@@ -12,12 +12,12 @@ class Dao
 
     public function __construct()
     {
-        $this->dbConnect = new PDO('mysql:host=localhost;dbname=stockdegraines;charset=utf8', 'root', '');
+        $this->dbConnect = new PDO('mysql:host=localhost;dbname=stock_de_graines;charset=utf8', 'root', '');
     }
 
     public function selectAllSemence()
     {
-        $sql = 'SELECT * FROM semences' ;
+        $sql = 'SELECT * FROM semence' ;
         $semenceStat = $this->dbConnect->prepare($sql);
         $semenceStat->setFetchMode(PDO::FETCH_CLASS|PDO::FETCH_PROPS_LATE, 'Src\Entites\Semence');
         $semenceStat->execute();
@@ -27,17 +27,17 @@ class Dao
 
     public function insertSemence($semence)
     {
-        $sql = 'INSERT INTO semences VALUES (null, :nom)' ;
+        $sql = 'INSERT INTO semence VALUES (null, :nomSemence)' ;
         $semenceStat = $this->dbConnect->prepare($sql);
         $param = [
-            ':nom' => $semence->getNomSemence(),
+            ':nomSemence' => $semence->getNomSemence(),
         ];
         $semenceStat->execute($param);
     }
 
     public function deleteSemence($id)
     {
-        $sql = 'DELETE FROM semences WHERE id_semence = '.$id ;
+        $sql = 'DELETE FROM semence WHERE id_semence = '.$id ;
         $semenceStat = $this->dbConnect->prepare($sql);
         $semenceStat->execute();
     }

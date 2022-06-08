@@ -25,11 +25,9 @@ class SemenceController extends Controller {
     }
 
     public function supprimer() {
-
         $idSemence = filter_input(INPUT_GET, 'id', FILTER_SANITIZE_NUMBER_INT);
         $model = new SemenceModel();
         $model->supprimerSemence($idSemence);
-
         $lSemences = $model->listSemence();
         $param = ['semences' => $lSemences];
         $this->render('Semence/ListSemence', $param);

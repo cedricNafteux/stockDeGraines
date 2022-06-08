@@ -15,7 +15,7 @@ class SemenceModel {
 
     public function nouvelleSemence()
     {
-        $semenceName = filter_input(INPUT_POST, 'semenceName', FILTER_SANITIZE_SPECIAL_CHARS);
+        $semenceName = filter_input(INPUT_POST, 'nomSem', FILTER_SANITIZE_SPECIAL_CHARS);
         $semence = new Semence($semenceName);
         $dao = new Dao();
         $dao->insertSemence($semence);
